@@ -1,0 +1,58 @@
+composer create-project laravel/laravel SmartShopV1
+
+Tabels
+
+Product
+ProductImage
+store 
+Supplier
+Admin
+user
+Order
+Payment
+Slider
+Setting
+Category
+Brand
+City 
+Area
+
+-----------------------------------------------------
+php artisan make:model Product -mcrf
+php artisan make:model ProductImage -mcrf
+php artisan make:model Store -mcrf
+php artisan make:model Supplier -mcrf
+php artisan make:model Admin -mcrf
+php artisan make:model Order -mcrf
+php artisan make:model Payment -mcrf
+
+php artisan make:model Slider -mcrf
+php artisan make:model Setting -mcrf
+php artisan make:model Category -mcrf
+php artisan make:model Brand -mcrf
+php artisan make:model City -mcrf
+php artisan make:model Area -mcrf
+----------------------------------------------
+
+php artisan migrate --path=/database/migrations/2023_02_10_201453_create_cities_table.php
+php artisan migrate --path=/database/migrations/2023_02_10_201535_create_areas_table.php
+php artisan migrate --path=/database/migrations/2023_02_10_201436_create_categories_table.php
+php artisan migrate --path=/database/migrations/2023_02_10_201448_create_brands_table.php
+php artisan migrate --path=/database/migrations/2023_02_10_201423_create_admins_table.php
+php artisan migrate --path=/database/migrations/2014_10_12_000000_create_users_table.php
+php artisan migrate --path=/database/migrations/2023_02_10_201405_create_products_table.php
+php artisan migrate --path=/database/migrations/2023_02_10_201432_create_payments_table.php
+
+
+php artisan migrate
+
+
+
+
+php artisan migrate:status
+php artisan migrate:rollback
+
+
+
+php artisan migrate:fresh --seed
+
